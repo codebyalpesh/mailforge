@@ -54,7 +54,7 @@ MailForge/
 │   ├── images/
 │
 ├── README.md
-
+```bash
 ---
 
 ## 🎯 Sections Included
