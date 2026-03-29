@@ -37,6 +37,7 @@ It showcases a professional UI for email campaign management, designed for start
 
 ## 📁 Project Structure
 
+```bash
 MailForge/
 │
 ├── index.html
