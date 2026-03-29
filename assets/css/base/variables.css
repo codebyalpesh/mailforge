@@ -1,0 +1,130 @@
+/* =========================================
+   MAILFORGE DESIGN TOKENS (Single Source of Truth)
+========================================= */
+
+:root {
+
+  /* =========================
+     BRAND COLORS
+  ========================= */
+
+  --primary: #FF6A2A;
+  --primary-hover: #E85A1F;
+  --primary-soft: #FFF1EA;
+
+  --secondary: #008F84;
+  --secondary-hover: #00746B;
+  --secondary-soft: #E6F7F5;
+
+  --accent: #FFC83D;
+  --accent-soft: #FFF6D9;
+
+  /* =========================
+     BACKGROUND SYSTEM
+  ========================= */
+
+  --bg-main: #F9FBFC;
+  --bg-alt: #FDF3EA;
+  --bg-dark: #080B1D;
+
+  /* =========================
+     SURFACE SYSTEM
+  ========================= */
+
+  --surface: #FFFFFF;
+  --surface-soft: #F1F3F6;
+  --surface-dark: #12162A;
+  --surface-dark2: #24274d;
+
+  /* =========================
+     TEXT SYSTEM
+  ========================= */
+
+  --text-main: #212121;
+  --text-secondary: #58595D;
+  --text-muted: #8A8F98;
+
+  --text-light: #FFFFFF;
+  --text-dark: #0F172A;
+
+  /* =========================
+     STATE COLORS
+  ========================= */
+
+  --success: #02A99B;
+  --warning: #FFC83D;
+  --error: #FF4D4F;
+
+  /* =========================
+     BORDER SYSTEM
+  ========================= */
+
+  --border-light: #E6E8EC;
+  --border-dark: #2E2F35;
+
+  /* =========================
+     SHADOW SYSTEM
+  ========================= */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+  /* =========================
+     RADIUS SYSTEM
+  ========================= */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* =========================
+     SPACING SYSTEM (8pt grid)
+  ========================= */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+  /* =========================
+     TYPOGRAPHY SYSTEM
+  ========================= */
+
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Sora', sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
+  --text-4xl: 64px;
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* =========================
+     TRANSITIONS
+  ========================= */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.6s ease;
+
+  /* =========================
+     Z-INDEX SYSTEM
+  ========================= */
+
+  --z-nav: 1000;
+  --z-overlay: 2000;
+  --z-modal: 3000;
+
+}

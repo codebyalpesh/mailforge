@@ -1,0 +1,267 @@
+/* =========================
+   GOOGLE FONTS IMPORT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* =========================================
+   BASE.CSS (Global Foundation)
+   MailForge Design System
+========================================= */
+
+/* =========================
+   CSS RESET (Modern)
+========================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ROOT DEFAULTS
+========================= */
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* =========================
+   BODY DEFAULT
+========================= */
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-md);
+  font-weight: var(--font-regular);
+  line-height: 1.6;
+
+  color: var(--text-main);
+  background-color: var(--bg-main);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  padding-top: 80px;
+}
+
+/* =========================
+   MEDIA ELEMENTS
+========================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* =========================
+   BUTTON DEFAULT
+========================= */
+
+button {
+  cursor: pointer;
+}
+
+/* =========================
+   LINK DEFAULT
+========================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   LIST DEFAULT
+========================= */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================
+   BACKGROUND HELPERS
+========================= */
+
+.bg-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.bg-alt {
+  background-color: var(--bg-alt);
+}
+
+/* =========================
+   FLEX HELPERS
+========================= */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================
+   GRID HELPERS
+========================= */
+
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+/* =========================
+   TRANSITION GLOBAL
+========================= */
+
+* {
+  transition: var(--transition-fast);
+}
+
+/* Bootstrap Mapping Layer */
+
+:root {
+
+  /* =========================
+     COLORS
+  ========================= */
+
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: color-mix(in srgb, var(--primary) 100%, transparent);
+  --bs-primary-hover: var(--primary-hover);
+  --bs-primary-soft: var(--primary-soft);
+
+  --bs-secondary: var(--secondary);
+  --bs-secondary-rgb: color-mix(in srgb, var(--secondary) 100%, transparent);
+  --bs-secondary-hover: var(--secondary-hover);
+  --bs-secondary-soft: var(--secondary-soft);
+
+  --bs-success: var(--success);
+  --bs-warning: var(--warning);
+  --bs-danger: var(--error);
+  --bs-info: var(--accent);
+
+  --bs-light: var(--surface-soft);
+  --bs-dark: var(--bg-dark);
+
+  --bs-body-bg: var(--bg-main);
+  --bs-body-color: var(--text-main);
+
+  --bs-link-color: var(--primary);
+  --bs-link-hover-color: var(--primary-hover);
+
+  /* subtle backgrounds */
+  --bs-primary-bg-subtle: var(--primary-soft);
+  --bs-secondary-bg-subtle: var(--secondary-soft);
+  --bs-warning-bg-subtle: var(--accent-soft);
+}
+
+/* Bootstrap Component Override Layer */
+
+.btn {
+  font-family: var(--bs-body-font-family);
+  border-radius: var(--bs-border-radius);
+  transition: var(--bs-transition-base);
+}
+
+.btn-primary {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background: var(--bs-primary-hover);
+  border-color: var(--bs-primary-hover);
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  outline: 2px solid var(--bs-primary-hover);
+  outline-offset: 2px;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  background: var(--bs-primary-hover);
+  border-color: var(--bs-primary-hover);
+}
+
+.btn-primary:disabled {
+  background: var(--bs-primary-soft);
+  border-color: var(--bs-primary-soft);
+  color: var(--text-muted);
+}
+
+/* Secondary */
+.btn-secondary {
+  background: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: var(--text-light);
+}
+
+.btn-secondary:hover {
+  background: var(--bs-secondary-hover);
+  border-color: var(--bs-secondary-hover);
+}
+
+/* =========================
+   OUTLINE BUTTONS (CRITICAL OVERRIDE)
+========================= */
+
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  background: transparent;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.show > .btn-outline-primary.dropdown-toggle {
+  background: var(--bs-primary);
+  color: var(--text-light);
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+}

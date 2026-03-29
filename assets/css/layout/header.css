@@ -1,0 +1,218 @@
+/* =========================================
+   HEADER / NAVBAR - PIXEL PERFECT FIX
+========================================= */
+
+.header {
+  width: 100%;
+  z-index: var(--z-nav);
+}
+
+/* NAVBAR BASE */
+.navbar-mailforge {
+  padding: var(--space-md) 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* LOGO */
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  color: var(--text-dark);
+}
+
+/* NAV LINKS */
+.navbar-nav {
+  gap: var(--space-lg);
+}
+
+.nav-link {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-dark);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   ACTION BUTTONS (DESKTOP)
+========================= */
+
+.nav-actions {
+  margin-left: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* LOGIN BUTTON */
+.btn-ghost {
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.btn-ghost:hover {
+  background: var(--surface-soft);
+  color: var(--text-dark);
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--primary);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================================
+   🔥 CUSTOM TOGGLER (MODERN UI)
+========================================= */
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+/* Remove bootstrap icon */
+.navbar-toggler-icon {
+  display: none;
+}
+
+/* Custom hamburger */
+.navbar-toggler::before,
+.navbar-toggler::after,
+.navbar-toggler span {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-dark);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler span {
+  position: relative;
+}
+
+.navbar-toggler::before {
+  transform: translateY(-6px);
+}
+
+.navbar-toggler::after {
+  transform: translateY(6px);
+}
+
+/* ACTIVE ANIMATION */
+.navbar-toggler[aria-expanded="true"]::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"]::after {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] span {
+  opacity: 0;
+}
+
+/* =========================================
+   MOBILE FIX (MOST IMPORTANT PART)
+========================================= */
+
+@media (max-width: 991px) {
+
+  .navbar-collapse {
+    margin-top: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  /* IMPORTANT FIX: actions not stretching */
+  .nav-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--space-sm);
+    margin-left: 0;
+  }
+
+  .nav-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 12px;
+    font-size: var(--text-sm);
+  }
+
+  /* Prevent weird full stretch look */
+  .btn-ghost,
+  .btn-primary {
+    width: auto;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE TWEAKS
+========================================= */
+
+@media (max-width: 576px) {
+
+  .navbar-mailforge {
+    padding: var(--space-sm) 0;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+  }
+
+  .nav-actions .btn {
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    width: 40px;
+    height: 40px;
+  }
+}

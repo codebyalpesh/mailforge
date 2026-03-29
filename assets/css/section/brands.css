@@ -1,0 +1,103 @@
+/* =========================================
+   BRANDS / LOGOS SECTION
+========================================= */
+
+.brands {
+  padding: var(--space-xl) 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* =========================
+   HEADING TEXT
+========================= */
+
+.brands-text {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   LOGOS WRAPPER
+========================= */
+
+.brands-logos {
+  gap: var(--space-lg) 0;
+}
+
+/* =========================
+   BRAND ITEM
+========================= */
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+
+  background: var(--surface-soft);
+  transition: var(--transition-normal);
+}
+
+/* LOGO IMAGE */
+.brand-item img {
+  max-height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-normal);
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.brand-item:hover {
+  background: var(--primary-soft);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-item:hover img {
+  filter: grayscale(0%) opacity(1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 991px) {
+
+  .brands {
+    padding: var(--space-lg) 0;
+  }
+
+  .brand-item {
+    padding: var(--space-sm);
+  }
+
+  .brand-item img {
+    max-height: 36px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .brands-text {
+    font-size: var(--text-xs);
+  }
+
+  .brands-logos {
+    gap: var(--space-md) 0;
+  }
+
+  .brand-item img {
+    max-height: 32px;
+  }
+}

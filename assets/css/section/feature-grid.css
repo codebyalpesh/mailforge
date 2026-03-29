@@ -1,0 +1,143 @@
+/* =========================================
+   FEATURE GRID SECTION
+========================================= */
+
+.feature-grid {
+  padding: var(--space-2xl) 0;
+  background: var(--bg-main);
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.feature-grid-title {
+  margin-bottom: var(--space-md);
+}
+
+.feature-grid-subtext {
+  margin-bottom: var(--space-xl);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   GRID WRAPPER
+========================= */
+
+.feature-grid-wrapper {
+  gap: var(--space-lg) 0;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.feature-card {
+  background: var(--surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gradient hover layer */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    var(--primary-soft)
+  );
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+/* Hover */
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--primary-soft);
+  color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-md);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.feature-card-title {
+  margin-bottom: var(--space-sm);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.feature-card-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 991px) {
+
+  .feature-grid {
+    padding: var(--space-xl) 0;
+  }
+
+  .feature-card {
+    padding: var(--space-md);
+  }
+
+  .feature-grid-wrapper {
+    gap: var(--space-md) 0;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .feature-grid-title {
+    font-size: var(--text-2xl);
+  }
+
+  .feature-grid-subtext {
+    font-size: var(--text-sm);
+  }
+
+  .feature-icon {
+    width: 42px;
+    height: 42px;
+  }
+}

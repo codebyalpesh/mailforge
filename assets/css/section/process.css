@@ -1,0 +1,158 @@
+/* =========================================
+   PROCESS SECTION
+========================================= */
+
+.process {
+  padding: var(--space-2xl) 0;
+  background: var(--surface);
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.process-title {
+  margin-bottom: var(--space-md);
+}
+
+.process-subtext {
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   STEPS WRAPPER
+========================= */
+
+.process-steps {
+  position: relative;
+  gap: var(--space-lg) 0;
+}
+
+/* CONNECTOR LINE (DESKTOP) */
+@media (min-width: 992px) {
+  .process-steps::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: var(--border-light);
+    z-index: 0;
+  }
+}
+
+/* =========================
+   STEP CARD
+========================= */
+
+.process-step {
+  position: relative;
+  background: var(--surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition-normal);
+  height: 100%;
+  z-index: 1;
+}
+
+/* Hover */
+.process-step:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.process-number {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--text-light);
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.process-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--primary-soft);
+  color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--text-lg);
+  margin: var(--space-md) auto;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.process-step-title {
+  margin-bottom: var(--space-sm);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.process-step-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 991px) {
+
+  .process {
+    padding: var(--space-xl) 0;
+  }
+
+  .process-step {
+    padding: var(--space-md);
+  }
+
+  .process-number {
+    top: -10px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .process-title {
+    font-size: var(--text-2xl);
+  }
+
+  .process-subtext {
+    font-size: var(--text-sm);
+  }
+
+  .process-icon {
+    width: 44px;
+    height: 44px;
+  }
+}

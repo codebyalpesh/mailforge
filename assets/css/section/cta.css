@@ -1,0 +1,130 @@
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta {
+  padding: var(--space-2xl) 0;
+  background: radial-gradient(
+      circle at top,
+      var(--surface-dark),
+      transparent 60%
+    ),
+    var(--bg-dark);
+}
+
+/* MAIN BOX */
+.cta-box {
+  text-align: center;
+  padding: 70px 40px;
+  border-radius: var(--radius-xl);
+  background: var(--surface-dark);
+  border: 1px solid var(--border-dark);
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* SOFT GLOW EFFECT */
+.cta-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    var(--surface-dark2),
+    transparent 60%
+  );
+  animation: floatGlow 8s infinite linear;
+}
+
+@keyframes floatGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* TEXT */
+.cta-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--text-light);
+  position: relative;
+}
+
+.cta-subtext {
+  color: var(--text-muted);
+  margin-top: 16px;
+  font-size: var(--text-base);
+  opacity: 0.75;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* BUTTONS */
+.cta-actions {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.cta-actions .btn-outline {
+  color: var(--text-light);
+  border: 1px solid var(--border-light);
+}
+
+.cta-actions .btn-outline:hover {
+  color: var(--surface-dark);
+}
+
+/* TRUST LINE */
+.cta-proof {
+  margin-top: 22px;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  position: relative;
+}
+
+/* =========================
+   BUTTON REFINEMENT (CTA ONLY)
+========================= */
+
+.btn-primary {
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  transition: var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .cta-box {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .cta-title {
+    font-size: var(--text-2xl);
+  }
+
+  .cta-subtext {
+    font-size: var(--text-sm);
+  }
+}

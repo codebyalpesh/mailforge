@@ -1,0 +1,109 @@
+/* =========================================
+   VALUE / STATS SECTION
+========================================= */
+
+.value {
+  padding: var(--space-2xl) 0;
+  background: var(--bg-main);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.value-title {
+  margin-bottom: var(--space-md);
+}
+
+.value-subtext {
+  margin-bottom: var(--space-xl);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   STATS WRAPPER
+========================= */
+
+.value-stats {
+  gap: var(--space-lg) 0;
+}
+
+/* =========================
+   STAT ITEM (CARD STYLE)
+========================= */
+
+.value-item {
+  background: var(--surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  height: 100%;
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.value-number {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.value-label {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.value-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 991px) {
+
+  .value {
+    padding: var(--space-xl) 0;
+  }
+
+  .value-number {
+    font-size: var(--text-2xl);
+  }
+
+  .value-item {
+    padding: var(--space-md);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .value-title {
+    font-size: var(--text-2xl);
+  }
+
+  .value-subtext {
+    font-size: var(--text-sm);
+  }
+
+  .value-number {
+    font-size: var(--text-xl);
+  }
+}

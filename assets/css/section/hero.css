@@ -1,0 +1,206 @@
+/* =========================================
+   HERO SECTION - CLEAN + RESPONSIVE FIX
+========================================= */
+
+.hero {
+    padding: var(--space-2xl) 0;
+    background: linear-gradient(180deg,
+            var(--bg-main) 0%,
+            var(--bg-alt) 100%);
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.hero-badge {
+    display: inline-block;
+    background: var(--primary-soft);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: var(--radius-xl);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-md);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.hero-title {
+    margin-bottom: var(--space-md);
+    max-width: 600px;
+}
+
+/* =========================
+   SUBTEXT
+========================= */
+
+.hero-subtext {
+    margin-bottom: var(--space-lg);
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.hero-actions {
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+/* CTA hover effect */
+.hero-actions .btn-primary {
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.hero-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* =========================
+   SOCIAL PROOF
+========================= */
+
+.hero-proof {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* =========================
+   RIGHT VISUAL (DESKTOP)
+========================= */
+
+.hero-visual {
+    position: relative;
+    height: 420px;
+}
+
+/* =========================
+   CARDS (DESKTOP FLOATING)
+========================= */
+
+.hero-card {
+    position: absolute;
+    background: var(--surface);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    min-width: 180px;
+    transition: all 0.3s ease;
+}
+
+/* MAIN CARD */
+.hero-card-main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    z-index: 2;
+}
+
+/* FLOATING CARDS */
+.hero-card-1 {
+    top: 10%;
+    left: 10%;
+    z-index: 1;
+}
+
+.hero-card-2 {
+    bottom: 10%;
+    right: 10%;
+    z-index: 1;
+}
+
+/* Hover interaction */
+.hero-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: var(--shadow-lg);
+    z-index: 3;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (FIXED PROPERLY)
+========================================= */
+
+@media (max-width: 991px) {
+
+    .hero {
+        padding: var(--space-xl) 0;
+        text-align: center;
+    }
+
+    .hero-title {
+        max-width: 100%;
+    }
+
+    .hero-subtext {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-proof {
+        justify-content: center;
+    }
+
+    /* IMPORTANT FIX: REMOVE FLOATING LAYOUT */
+    .hero-visual {
+        height: auto;
+        margin-top: var(--space-xl);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .hero-card {
+        position: relative;
+        transform: none !important;
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .hero-card-main {
+        order: 1;
+        top: auto;
+        left: auto;
+    }
+
+    .hero-card-1 {
+        order: 2;
+        top: auto;
+        left: auto;
+    }
+
+    .hero-card-2 {
+        order: 3;
+        bottom: auto;
+        right: auto;
+    }
+}
+
+/* SMALL MOBILE OPTIMIZATION */
+
+@media (max-width: 576px) {
+
+    .hero-card {
+        max-width: 100%;
+        padding: 16px;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .hero-visual {
+        gap: 12px;
+    }
+}
